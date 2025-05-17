@@ -1,6 +1,7 @@
 package org.uv.DAPP02Practica04;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "productos")
@@ -14,8 +15,7 @@ public class Producto {
     private String nombre;
 
     @Column
-    private float precio;
-
+    private BigDecimal precio;  
     public Long getClave() {
         return clave;
     }
@@ -32,11 +32,11 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public float getPrecio() {
+    public BigDecimal getPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(BigDecimal precio) {
         this.precio = precio;
     }
 }

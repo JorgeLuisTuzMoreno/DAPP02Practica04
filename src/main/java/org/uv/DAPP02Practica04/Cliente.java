@@ -9,15 +9,18 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "clientes")
 
 public class Cliente {
-
+    
     @Id
     @Column
-    @GeneratedValue(generator = "clientes_clave_seq", strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "clientes_clave_seq", sequenceName = "clientes_clave_seq", initialValue = 1, allocationSize = 1)
-
+    @GeneratedValue(generator = "clientes_clave_seq",
+            strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name="clientes_clave_seq",
+            sequenceName = "clientes_clave_seq", initialValue = 1,
+            allocationSize = 1)
+    
     private Long clave;
 
     @Column
